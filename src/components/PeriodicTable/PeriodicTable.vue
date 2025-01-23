@@ -3,12 +3,10 @@ import { ref, type Ref } from "vue";
 import rawElements from "./Elements/PeriodicTableElements";
 import type ElementType from "./Elements/Element";
 import Element from "./Elements/Element.vue";
-import { test } from "./Elements/utils";
 import Free from "./Elements/free.vue";
 const elements: Ref<Array<ElementType>> = ref(
   rawElements as Array<ElementType>
 );
-test();
 </script>
 <template>
   <div class="m-8">
@@ -64,12 +62,16 @@ test();
       <div>
         <div class="w-12 h-14 flex items-center justify-center flex-col">
           <span class="h-7 w-[2px] bg-white"></span>
-          <span class="ml-[37px] w-[39px] h-[2px] bg-white"></span>
+          <span
+            class="ml-[37px] w-[39px] h-[2px] bg-gradient-to-r from-white to-[#1c4dfc]"
+          ></span>
           <span class="h-7 w-[2px] bg-white"></span>
         </div>
         <div class="w-12 h-[52px] flex items-center justify-center flex-col">
           <span class="h-7 w-[2px] bg-white"></span>
-          <span class="ml-[37px] w-[39px] h-[2px] bg-white"></span>
+          <span
+            class="ml-[37px] w-[39px] h-[2px] bg-gradient-to-r from-white to-[#523d26]"
+          ></span>
           <span class="h-6"></span>
         </div>
       </div>

@@ -61,13 +61,3 @@ export const getNeon = (type: ElementType) => {
     return `shadow-[inset_0_0_7px_#454242,inset_0_0_7px_#454242,inset_0_0_16px_#454242,0_0_2px_#fff,0_0_7px_#454242,0_0_7px_#454242,0_0_16px_#454242]`;
   else throw new Error(`Unknown element type: ${type}`);
 };
-import elements from "./PeriodicTableElements";
-export const test = () => {
-  let set = new Set();
-  elements.forEach((element) => {
-    set.add(element.category);
-  });
-  set.forEach((element) => {
-    console.log(element);
-  });
-};
