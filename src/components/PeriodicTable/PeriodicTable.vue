@@ -1,12 +1,19 @@
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
+import { ref, watch, type Ref } from "vue";
 import rawElements from "./Elements/PeriodicTableElements";
 import type ElementType from "./Elements/Element";
 import Element from "./Elements/Element.vue";
-import Free from "./Elements/free.vue";
+import Free from "./Elements/Free.vue";
+import { useElementsStore } from "@/stores/elements";
 const elements: Ref<Array<ElementType>> = ref(
   rawElements as Array<ElementType>
 );
+const { setSelectedElement } = useElementsStore();
+document.addEventListener("click", (e) => {
+  const el: HTMLElement = e.target as HTMLElement;
+  const closestButton = el?.closest("button");
+  if (closestButton?.id.split("-")[0] != "atom") setSelectedElement("all");
+});
 </script>
 <template>
   <div class="m-8">
