@@ -1,6 +1,17 @@
 import type { ElementType } from "./Element";
 import type Element from "./Element";
-
+export const elementTypesArray = [
+  "Alkali Metal",
+  "Alkaline Earth Metal",
+  "Transition Metal",
+  "Post Transition Metal",
+  "Metalloid",
+  "Reactive Nonmetal",
+  "Noble Gas",
+  "Lanthanide",
+  "Actinide",
+  "Unknown",
+];
 export const getType = (element: Element): ElementType => {
   if (element.category === "alkali metal") return "Alkali Metal";
   else if (element.category === "alkaline earth metal")

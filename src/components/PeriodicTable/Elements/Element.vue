@@ -1,26 +1,28 @@
 <script setup lang="ts">
 import { onMounted, ref, type Ref } from "vue";
 import type Element from "./Element";
-import { getType, getNeon, getTextColor } from "./utils";
+import { getType, getNeon, getTextColor, elementTypesArray } from "./utils";
 import { Tooltip } from "flowbite";
 import type { TooltipOptions, TooltipInterface } from "flowbite";
 import type { InstanceOptions } from "flowbite";
-import router from "@/router";
 import { useElementsStore, type sEType } from "@/stores/elements";
 
 const props = defineProps<{ element: Element }>();
 
 const shadow = ref(getNeon(getType(props.element)));
 const style = ref(getTextColor(getType(props.element)));
-const { selectedElement, setSelectedElement } = useElementsStore();
+const { setSelectedElement } = useElementsStore();
 const lastSelected: Ref<sEType> = ref("all");
 useElementsStore().$subscribe(
   (_, state) => {
     lastSelected.value = state.selectedElement;
+
     if (
-      getType(props.element) != state.selectedElement &&
-      state.selectedElement != props.element &&
-      state.selectedElement != "all"
+      (getType(props.element) != state.selectedElement &&
+        state.selectedElement != props.element &&
+        state.selectedElement != "all") ||
+      (elementTypesArray.includes(state.selectedElement as string) &&
+        state.selectedElement != getType(props.element))
     ) {
       shadow.value = style.value = "";
     } else {
