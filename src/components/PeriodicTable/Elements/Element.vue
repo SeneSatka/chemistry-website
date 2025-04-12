@@ -91,14 +91,14 @@ const click = () => {
       @click="click"
       :id="`atom-${element.symbol}-btn`"
       type="button"
-      :class="`flex-col text-shadow w-16 h-16 flex  justify-center items-center border-2 rounded-md ${shadow} transition-all duration-500`"
+      :class="`flex-col text-shadow w-12 h-12 flex  justify-center items-center border-2 rounded-md ${shadow} transition-all duration-500`"
       :style="`${style}`"
     >
-      <span :class="`text-[12px]/[12px]  absolute left-[6px] top-[6px]`">{{
+      <span :class="`text-[8px]/[8px]  absolute left-1 top-1`">{{
         element.number
       }}</span>
-      <span class="text-[26px]/[35px]"> {{ element.symbol }}</span>
-      <span class="text-[12px]/[8px]">{{ element.atomic_mass.toFixed(2) }}</span>
+      <span class="text-[22px]/[31px]"> {{ element.symbol }}</span>
+      <span class="text-[8px]/[4px]">{{ element.atomic_mass.toFixed(2) }}</span>
     </button>
     <div
       :id="`${element.symbol}-name`"

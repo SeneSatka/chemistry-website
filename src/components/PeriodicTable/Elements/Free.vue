@@ -1,3 +1,3 @@
 <template>
-  <div class="min-h-16 min-w-16 free-square" id="free-square"></div>
+  <div class="min-h-12 min-w-12 free-square" id="free-square"></div>
 </template>

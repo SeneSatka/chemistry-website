@@ -17,17 +17,17 @@ document.addEventListener("click", (e) => {
 });
 </script>
 <template>
-  <div class="mx-8">
-    <div class="my-4">
-      <div class="flex flex-row gap-3">
+  <div class="w-min">
+    <div class="my-4 w-min">
+      <div class="flex flex-row gap-2 w-min">
         <div v-for="g in 18" class="flex flex-col">
           <div v-for="p in 7">
             <div v-if="g == 3 && p == 6">
               <div
-                class="w-16 h-44 flex items-center justify-start flex-col m-0"
+                class="w-12 h-40 flex items-center justify-start flex-col m-0"
               >
                 <div
-                  class="w-16 h-16 flex items-center justify-center flex-col mt-2"
+                  class="w-12 h-16 flex items-center justify-center flex-col"
                 >
                   <span class="h-7"></span>
                   <span
@@ -37,15 +37,15 @@ document.addEventListener("click", (e) => {
                     class="h-3 w-[2px] bg-gradient-to-b from-[#1c4dfc] to-white"
                   ></span>
                 </div>
-                <div class="w-12 h-30 flex items-center justify-start flex-col">
+                <div class="w-12 h-24 flex items-center justify-start flex-col">
                   <span
-                    class="h-10 w-[2px] bg-gradient-to-b from-white to-[#523d26]"
+                    class="h-6 w-[2px] bg-gradient-to-b from-white to-[#523d26]"
                   ></span>
                   <span
                     class="w-6 h-6 border-2 rounded-full shadow-[inset_0_0_7px_#523d26,inset_0_0_7px_#523d26,inset_0_0_16px_#523d26,0_0_2px_#fff,0_0_7px_#523d26,0_0_7px_#523d26,0_0_16px_#523d26]"
                   ></span
                   ><span
-                    class="h-14 w-[2px] bg-gradient-to-b to-white from-[#523d26]"
+                    class="h-12 w-[2px] bg-gradient-to-b to-white from-[#523d26]"
                   ></span>
                 </div>
               </div>
@@ -57,7 +57,7 @@ document.addEventListener("click", (e) => {
             >
               <Element
                 :key="`${g}-${p}`"
-                class="mt-3"
+                class="mt-2"
                 :element="
                   elements.find((e) => e.group === g && e.period === p) ??
                   elements[0]
@@ -65,31 +65,31 @@ document.addEventListener("click", (e) => {
               />
             </div>
             <div v-else>
-              <Free class="mt-3" />
+              <Free class="mt-2" />
             </div>
           </div>
         </div>
       </div>
-      <div class="flex flex-row gap-3 mt-3">
+      <div class="flex flex-row gap-2 w-min">
         <Free /> <Free />
         <div>
-          <div class="w-16 h-16 flex items-center justify-center flex-col">
-            <span class="h-7 w-[2px] bg-white"></span>
+          <div class="w-12 h-14 flex items-center justify-center flex-col">
+            <span class="h-12 w-[2px] bg-white"></span>
             <span
               class="ml-[37px] w-[39px] h-[2px] bg-gradient-to-r from-white to-[#1c4dfc]"
             ></span>
-            <span class="h-9 w-[2px] bg-white"></span>
+            <span class="h-7 w-[2px] bg-white"></span>
           </div>
-          <div class="w-16 h-[80px] flex items-center justify-center flex-col">
-            <span class="h-12 w-[2px] bg-white"></span>
+          <div class="w-12 h-[52px] flex items-center justify-center flex-col">
+            <span class="h-7 w-[2px] bg-white"></span>
             <span
               class="ml-[37px] w-[39px] h-[2px] bg-gradient-to-r from-white to-[#523d26]"
             ></span>
-            <span class="h-8"></span>
+            <span class="h-6"></span>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="flex flex-row gap-3">
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-row gap-2">
             <Element
               v-for="element in elements.filter(
                 (e) => e.group === 3 && e.period === 6
@@ -98,7 +98,7 @@ document.addEventListener("click", (e) => {
               :element="element ?? elements[0]"
             />
           </div>
-          <div class="flex flex-row gap-3">
+          <div class="flex flex-row gap-2">
             <Element
               :key="`${element.number}`"
               v-for="element in elements.filter(

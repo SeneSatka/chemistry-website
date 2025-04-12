@@ -37,7 +37,7 @@ useElementsStore().$subscribe((_, state) => {
 
 </script>
 <template>
-<button  id="atom-detail" :class="` text-lg cursor-auto flex-col  min-w-[420px] max-w-[420px]  mt-7  flex  px-7 pb-5 border rounded-md ${shadow} transition-all duration-500`" >
+<button  id="atom-detail" :class="` text-lg cursor-auto flex-col  min-w-[340px] w-min  mt-7  flex  px-4 pb-4 border rounded-md ${shadow} transition-all duration-500`" >
     <div class="flex flex-col" v-if="data=='all'||!isElement">
         <span class="text-3xl font-bold my-4" :style="style">Periodic Table</span>
         <span class=" text-left font-semibold" >The periodic table, also known as the periodic table of the elements, is an ordered arrangement of the chemical elements into rows ("periods") and columns ("groups"). It is an icon of chemistry and is widely used in physics and other sciences. It is a depiction of the periodic law, which states that when the elements are arranged in order of their atomic numbers an approximate recurrence of their properties is evident. The table is divided into four roughly rectangular areas called blocks. Elements in the same group tend to show similar chemical characteristics. </span>
