@@ -1,33 +1,37 @@
 <script setup lang="ts">
 import { useElementsStore, type sEType } from "@/stores/elements";
-import type { ElementType } from "../Elements/Element";
-import { elementTypesArray, getNeon, getTextColor } from "../Elements/utils";
+import type { ElementClass, ElementType } from "../Elements/Element";
+import { ElementTypes, elementTypesArray,  } from "../Elements/utils";
 import { ref, type Ref } from "vue";
 const props = defineProps<{ elementType: ElementType }>();
-const shadow = ref(getNeon(props.elementType));
-const style = ref(getTextColor(props.elementType));
+const elementClass:Ref<ElementClass> = ref(ElementTypes.find(m => m.name == props.elementType) as ElementClass);
+const shadow = ref(ElementTypes.find(m => m.name == props.elementType)?.neon ||
+      ElementTypes.find(m => m.raw_name == "unknown")?.neon);
+const style = ref(ElementTypes.find(m => m.name == props.elementType)?.text_color ||
+ElementTypes.find(m => m.raw_name == "unknown")?.text_color);
 const { setSelectedElement } = useElementsStore();
 const lastSelected: Ref<sEType> = ref("all");
 useElementsStore().$subscribe(
   (_, state) => {
     lastSelected.value = state.selectedElement;
-
     if (
-      elementTypesArray.includes(state.selectedElement as string) &&
-      props.elementType != state.selectedElement
-    ) {
+      ElementTypes.find(m=>m.raw_name==(state.selectedElement as ElementClass)?.raw_name) &&
+      elementClass.value.raw_name != (state.selectedElement as ElementClass).raw_name
+    ) { 
       shadow.value = style.value = "";
     } else {
-      shadow.value = getNeon(props.elementType);
-      style.value = getTextColor(props.elementType);
+      shadow.value =   ElementTypes.find(m => m.name == props.elementType)?.neon ||
+      ElementTypes.find(m => m.raw_name == "unknown")?.neon
+      style.value =  ElementTypes.find(m => m.name == props.elementType)?.text_color ||
+      ElementTypes.find(m => m.raw_name == "unknown")?.text_color
     }
   },
   { flush: "sync" }
 );
 
 const click = () => {
-  if (lastSelected.value === props.elementType) setSelectedElement("all");
-  else setSelectedElement(props.elementType);
+  if (lastSelected.value === elementClass.value) setSelectedElement("all");
+  else setSelectedElement(elementClass.value);
 };
 </script>
 <template>
