@@ -94,7 +94,7 @@ const click = () => {
       :class="`flex-col text-shadow w-16 h-16 flex  justify-center items-center border-2 rounded-md ${shadow} transition-all duration-500`"
       :style="`${style}`"
     >
-      <span :class="`text-[12px]/[12px]  absolute left-1 top-1`">{{
+      <span :class="`text-[12px]/[12px]  absolute left-[6px] top-[6px]`">{{
         element.number
       }}</span>
       <span class="text-[26px]/[35px]"> {{ element.symbol }}</span>
