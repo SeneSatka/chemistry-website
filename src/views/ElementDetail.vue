@@ -38,16 +38,16 @@ useElementsStore().$subscribe((_, state) => {
 </script>
 <template>
     <button id="atom-detail"
-        :class="` text-lg cursor-auto flex-col  min-w-[340px] w-min  mt-7  flex  px-4 pb-4 border rounded-md ${shadow} transition-all duration-500`">
+        :class="` text-lg cursor-auto flex-col  w-[400px]  mt-7   flex  px-4 pb-4 border rounded-md ${shadow} transition-all duration-500`">
         <div class="flex flex-col" v-if="data == 'all' || !isElement">
             <span class="text-3xl font-bold my-4" :style="style">Periodic Table</span>
-            <span class=" text-left font-semibold">The periodic table, also known as the periodic table of the elements,
+            <span class=" text-left font-medium">The periodic table, also known as the periodic table of the elements,
                 is an ordered arrangement of the chemical elements into rows ("periods") and columns ("groups"). It is
                 an icon of chemistry and is widely used in physics and other sciences. It is a depiction of the periodic
                 law, which states that when the elements are arranged in order of their atomic numbers an approximate
                 recurrence of their properties is evident. The table is divided into four roughly rectangular areas
                 called blocks. Elements in the same group tend to show similar chemical characteristics. </span>
-            <span class="mt-1 text-left"><span class="font-extrabold">Source:</span> <a
+            <span class="mt-1 text-left"><span class="font-bold">Source:</span> <a
                     class="text-blue-300 font-semibold"
                     href="https://en.wikipedia.org/wiki/Periodic_table">Vikipedia</a></span>
         </div>
@@ -64,10 +64,6 @@ useElementsStore().$subscribe((_, state) => {
 
                         </div>
                     </div>
-
-                    <button slot="ar-button" id="ar-button">
-                        View in your space
-                    </button>
                 </model-viewer>
                 <div class="w-full text-left text-lg mt-2 flex flex-col">
                     <span class="font-extrabold ">Summary</span>
