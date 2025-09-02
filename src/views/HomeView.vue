@@ -3,10 +3,11 @@ import PeriodicTable from "@/components/PeriodicTable/PeriodicTable.vue";
 import ElementDetail from "./ElementDetail.vue";
 </script>
 <template>
-  <div class=" mx-2 flex lg:flex-row sm:flex-col gap-4 flex-wrap w-screen h-full items-start   justify-start">
-    <PeriodicTable />
-    <ElementDetail  />
-    
+  <div class=" mx-2 flex    w-screen h-full items-center  justify-center">
+    <div class="flex lg:flex-row items-start justify-start gap-4 sm:flex-col flex-wrap pt-6">
+      <PeriodicTable />
+      <ElementDetail />
+    </div>
   </div>
 </template>
 <style scoped></style>

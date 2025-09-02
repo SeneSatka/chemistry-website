@@ -91,19 +91,19 @@ const click = () => {
       @click="click"
       :id="`atom-${element.symbol}-btn`"
       type="button"
-      :class="`flex-col text-shadow w-12 h-12 flex  justify-center items-center border-2 rounded-md ${shadow} transition-all duration-500`"
+      :class="`flex-col text-shadow w-16 h-16 flex  justify-center items-center border-2 rounded-md ${shadow} transition-all duration-500`"
       :style="`${style}`"
     >
-      <span :class="`text-[8px]/[8px]  absolute left-1 top-1`">{{
+      <span :class="`text-[12px]/[12px]  absolute left-[5px] top-[5px]`">{{
         element.number
       }}</span>
-      <span class="text-[22px]/[31px]"> {{ element.symbol }}</span>
-      <span class="text-[8px]/[4px]">{{ element.atomic_mass.toFixed(2) }}</span>
+      <span class="text-[30px]/[40px]"> {{ element.symbol }}</span>
+      <span class="text-[11px]/[5px] ">{{ element.atomic_mass.toFixed(2) }}</span>
     </button>
     <div
       :id="`${element.symbol}-name`"
       role="tooltip"
-      :class="`absolute z-10 visi invisible pointer-events-none px-2 py-1 -translate-y-9 text-sm mb-30 -translate-x-2 font-medium text-white   opacity-0 shadow-lg group-hover:visible group-hover:opacity-100 transition-opacity duration-30 ${shadow}`"
+      :class="`absolute z-10 invisible pointer-events-none px-2 py-1 -translate-y-9 text-base mb-30 -translate-x-2 font-medium text-white   opacity-0 shadow-lg group-hover:visible group-hover:opacity-100 transition-opacity duration-30 ${shadow}`"
       :style="`${style}`"
     >
       <div
