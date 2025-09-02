@@ -1,28 +1,13 @@
 <script setup lang="ts"></script>
 <template>
-  <div>
+  <div class="flex flex-col">
+    <span> Framework Vue 3 https://vuejs.org/ </span>
+    <span> UI Flowbite https://flowbite.com/docs/getting-started/vue/ </span>
+    <span> Style Tailwind CSS https://tailwindcss.com/ </span>
     <span>
-      Framework
-      Vue 3
-      https://vuejs.org/
-
-    </span>
-    <span>
-      UI
-      Flowbite
-      https://flowbite.com/docs/getting-started/vue/
-    </span>
-    <span>
-      Style
-      Tailwind CSS
-      https://tailwindcss.com/
-    </span>
-    <span>
-      Data
-      PeriodicTableElements
+      Data PeriodicTableElements
       https://github.com/Bowserinator/Periodic-Table-JSON (edited by SeneSatka)
-   </span>
-
+    </span>
   </div>
 </template>
 <style scoped></style>

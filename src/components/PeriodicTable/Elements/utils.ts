@@ -12,18 +12,77 @@ export const elementTypesArray = [
   "Actinide",
   "Unknown",
 ];
-export const  ElementTypes:Array<ElementClass>= [
-  {name:"Alkali Metal",raw_name:"alkali metal",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #fa2323,0 0 15px #fa2323, 0 0 18px #fa2323,0 0 18px #fa2323;",neon:"shadow-[inset_0_0_7px_#d10404,inset_0_0_7px_#d10404,inset_0_0_16px_#d10404,0_0_2px_#fff,0_0_7px_#d10404,0_0_7px_#d10404,0_0_16px_#d10404]"},
-  {name:"Alkaline Earth Metal",raw_name:"alkaline earth metal",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #e0812d,0 0 15px #e0812d, 0 0 18px #e0812d,0 0 18px #e0812d;",neon:"shadow-[inset_0_0_7px_#e0812d,inset_0_0_7px_#e0812d,inset_0_0_16px_#e0812d,0_0_2px_#fff,0_0_7px_#e0812d,0_0_7px_#e0812d,0_0_16px_#e0812d]"},
-  {name:"Transition Metal",raw_name:"transition metal",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #bdbf2c,0 0 15px #bdbf2c, 0 0 18px #bdbf2c,0 0 18px #bdbf2c;",neon:"shadow-[inset_0_0_7px_#bdbf2c,inset_0_0_7px_#bdbf2c,inset_0_0_16px_#bdbf2c,0_0_2px_#fff,0_0_7px_#bdbf2c,0_0_7px_#bdbf2c,0_0_16px_#bdbf2c]"},
-  {name:"Post Transition Metal",raw_name:"post-transition metal",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #1bd124,0 0 15px #1bd124, 0 0 18px #1bd124,0 0 18px #1bd124;",neon:"shadow-[inset_0_0_7px_#1bd124,inset_0_0_7px_#1bd124,inset_0_0_16px_#1bd124,0_0_2px_#fff,0_0_7px_#1bd124,0_0_7px_#1bd124,0_0_16px_#1bd124]"},
-  {name:"Metalloid",raw_name:"metalloid",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #0f8dd6,0 0 15px #0f8dd6, 0 0 18px #0f8dd6,0 0 18px #0f8dd6;",neon:"shadow-[inset_0_0_7px_#0f8dd6,inset_0_0_7px_#0f8dd6,inset_0_0_16px_#0f8dd6,0_0_2px_#fff,0_0_7px_#0f8dd6,0_0_7px_#0f8dd6,0_0_16px_#0f8dd6]"},
-  {name:"Reactive Nonmetal",raw_name:"reactive nonmetal",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #3e1cfc,0 0 15px #3e1cfc, 0 0 18px #3e1cfc,0 0 18px #3e1cfc;",neon:"shadow-[inset_0_0_7px_#3e1cfc,inset_0_0_7px_#3e1cfc,inset_0_0_16px_#3e1cfc,0_0_2px_#fff,0_0_7px_#3e1cfc,0_0_7px_#3e1cfc,0_0_16px_#3e1cfc]"},
-  {name:"Noble Gas",raw_name:"noble gas",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #d71cfc,0 0 15px #d71cfc, 0 0 18px #d71cfc,0 0 18px #d71cfc;",neon:"shadow-[inset_0_0_7px_#d71cfc,inset_0_0_7px_#d71cfc,inset_0_0_16px_#d71cfc,0_0_2px_#fff,0_0_7px_#d71cfc,0_0_7px_#d71cfc,0_0_16px_#d71cfc]"},
-  {name:"Lanthanide",raw_name:"lanthanide",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #1c4dfc,0 0 15px #1c4dfc, 0 0 18px #1c4dfc,0 0 18px #1c4dfc;",neon:"shadow-[inset_0_0_7px_#1c4dfc,inset_0_0_7px_#1c4dfc,inset_0_0_16px_#1c4dfc,0_0_2px_#fff,0_0_7px_#1c4dfc,0_0_7px_#1c4dfc,0_0_16px_#1c4dfc]"},
-  {name:"Actinide",raw_name:"actinide",text_color:"",neon:"shadow-[inset_0_0_7px_#523d26,inset_0_0_7px_#523d26,inset_0_0_16px_#523d26,0_0_2px_#fff,0_0_7px_#523d26,0_0_7px_#523d26,0_0_16px_#523d26]"},
-  {name:"Unknown",raw_name:"unknown",text_color:"text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #454242,0 0 15px #454242, 0 0 18px #454242,0 0 18px #454242;",neon:"shadow-[inset_0_0_7px_#454242,inset_0_0_7px_#454242,inset_0_0_16px_#454242,0_0_2px_#fff,0_0_7px_#454242,0_0_7px_#454242,0_0_16px_#454242]"},
-]
+export const ElementTypes: Array<ElementClass> = [
+  {
+    name: "Alkali Metal",
+    raw_name: "alkali metal",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #fa2323,0 0 15px #fa2323, 0 0 18px #fa2323,0 0 18px #fa2323;",
+    neon: "shadow-[inset_0_0_7px_#d10404,inset_0_0_7px_#d10404,inset_0_0_16px_#d10404,0_0_2px_#fff,0_0_7px_#d10404,0_0_7px_#d10404,0_0_16px_#d10404]",
+  },
+  {
+    name: "Alkaline Earth Metal",
+    raw_name: "alkaline earth metal",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #e0812d,0 0 15px #e0812d, 0 0 18px #e0812d,0 0 18px #e0812d;",
+    neon: "shadow-[inset_0_0_7px_#e0812d,inset_0_0_7px_#e0812d,inset_0_0_16px_#e0812d,0_0_2px_#fff,0_0_7px_#e0812d,0_0_7px_#e0812d,0_0_16px_#e0812d]",
+  },
+  {
+    name: "Transition Metal",
+    raw_name: "transition metal",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #bdbf2c,0 0 15px #bdbf2c, 0 0 18px #bdbf2c,0 0 18px #bdbf2c;",
+    neon: "shadow-[inset_0_0_7px_#bdbf2c,inset_0_0_7px_#bdbf2c,inset_0_0_16px_#bdbf2c,0_0_2px_#fff,0_0_7px_#bdbf2c,0_0_7px_#bdbf2c,0_0_16px_#bdbf2c]",
+  },
+  {
+    name: "Post Transition Metal",
+    raw_name: "post-transition metal",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #1bd124,0 0 15px #1bd124, 0 0 18px #1bd124,0 0 18px #1bd124;",
+    neon: "shadow-[inset_0_0_7px_#1bd124,inset_0_0_7px_#1bd124,inset_0_0_16px_#1bd124,0_0_2px_#fff,0_0_7px_#1bd124,0_0_7px_#1bd124,0_0_16px_#1bd124]",
+  },
+  {
+    name: "Metalloid",
+    raw_name: "metalloid",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #0f8dd6,0 0 15px #0f8dd6, 0 0 18px #0f8dd6,0 0 18px #0f8dd6;",
+    neon: "shadow-[inset_0_0_7px_#0f8dd6,inset_0_0_7px_#0f8dd6,inset_0_0_16px_#0f8dd6,0_0_2px_#fff,0_0_7px_#0f8dd6,0_0_7px_#0f8dd6,0_0_16px_#0f8dd6]",
+  },
+  {
+    name: "Reactive Nonmetal",
+    raw_name: "reactive nonmetal",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #3e1cfc,0 0 15px #3e1cfc, 0 0 18px #3e1cfc,0 0 18px #3e1cfc;",
+    neon: "shadow-[inset_0_0_7px_#3e1cfc,inset_0_0_7px_#3e1cfc,inset_0_0_16px_#3e1cfc,0_0_2px_#fff,0_0_7px_#3e1cfc,0_0_7px_#3e1cfc,0_0_16px_#3e1cfc]",
+  },
+  {
+    name: "Noble Gas",
+    raw_name: "noble gas",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #d71cfc,0 0 15px #d71cfc, 0 0 18px #d71cfc,0 0 18px #d71cfc;",
+    neon: "shadow-[inset_0_0_7px_#d71cfc,inset_0_0_7px_#d71cfc,inset_0_0_16px_#d71cfc,0_0_2px_#fff,0_0_7px_#d71cfc,0_0_7px_#d71cfc,0_0_16px_#d71cfc]",
+  },
+  {
+    name: "Lanthanide",
+    raw_name: "lanthanide",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #1c4dfc,0 0 15px #1c4dfc, 0 0 18px #1c4dfc,0 0 18px #1c4dfc;",
+    neon: "shadow-[inset_0_0_7px_#1c4dfc,inset_0_0_7px_#1c4dfc,inset_0_0_16px_#1c4dfc,0_0_2px_#fff,0_0_7px_#1c4dfc,0_0_7px_#1c4dfc,0_0_16px_#1c4dfc]",
+  },
+  {
+    name: "Actinide",
+    raw_name: "actinide",
+    text_color: "",
+    neon: "shadow-[inset_0_0_7px_#523d26,inset_0_0_7px_#523d26,inset_0_0_16px_#523d26,0_0_2px_#fff,0_0_7px_#523d26,0_0_7px_#523d26,0_0_16px_#523d26]",
+  },
+  {
+    name: "Unknown",
+    raw_name: "unknown",
+    text_color:
+      "text-shadow: 0 0 2px #fff,0 0 3px #fff, 0 0 9px #454242,0 0 15px #454242, 0 0 18px #454242,0 0 18px #454242;",
+    neon: "shadow-[inset_0_0_7px_#454242,inset_0_0_7px_#454242,inset_0_0_16px_#454242,0_0_2px_#fff,0_0_7px_#454242,0_0_7px_#454242,0_0_16px_#454242]",
+  },
+];
 export const getType = (element: Element): ElementType => {
   if (element.category === "alkali metal") return "Alkali Metal";
   else if (element.category === "alkaline earth metal")

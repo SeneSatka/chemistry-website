@@ -33,10 +33,10 @@ useElementsStore().$subscribe(
     ) {
       shadow.value = style.value = "";
     } else {
-      shadow.value =   ElementTypes.find(m => m.raw_name == props.element.category)?.neon ||
-      ElementTypes.find(m => m.raw_name == "unknown")?.neon
-      style.value =   ElementTypes.find(m => m.raw_name == props.element.category)?.text_color ||
-      ElementTypes.find(m => m.raw_name == "unknown")?.text_color
+      shadow.value = ElementTypes.find(m => m.raw_name == props.element.category)?.neon ||
+        ElementTypes.find(m => m.raw_name == "unknown")?.neon
+      style.value = ElementTypes.find(m => m.raw_name == props.element.category)?.text_color ||
+        ElementTypes.find(m => m.raw_name == "unknown")?.text_color
     }
   },
   { flush: "sync" }
@@ -87,34 +87,25 @@ const click = () => {
 </script>
 <template>
   <div class="relative group" :id="`atom-${element.symbol}-${element.number}`">
-    <button
-      @click="click"
-      :id="`atom-${element.symbol}-btn`"
-      type="button"
+    <button @click="click" :id="`atom-${element.symbol}-btn`" type="button"
       :class="`flex-col text-shadow w-16 h-16 flex  justify-center items-center border-2 rounded-md ${shadow} transition-all duration-500`"
-      :style="`${style}`"
-    >
+      :style="`${style}`">
       <span :class="`text-[12px]/[12px]  absolute left-[5px] top-[5px]`">{{
         element.number
-      }}</span>
+        }}</span>
       <span class="text-[30px]/[40px]"> {{ element.symbol }}</span>
       <span class="text-[11px]/[5px] ">{{ element.atomic_mass.toFixed(2) }}</span>
     </button>
-    <div
-      :id="`${element.symbol}-name`"
-      role="tooltip"
+    <div :id="`${element.symbol}-name`" role="tooltip"
       :class="`absolute z-10 invisible pointer-events-none px-2 py-1 -translate-y-9 text-base mb-30 -translate-x-2 font-medium text-white   opacity-0 shadow-lg group-hover:visible group-hover:opacity-100 transition-opacity duration-30 ${shadow}`"
-      :style="`${style}`"
-    >
-      <div
-        class="bg-slate-500 bg-opacity-80 px-2 py-1 rounded-lg cursor-default"
-      >
+      :style="`${style}`">
+      <div class="bg-slate-500 bg-opacity-80 px-2 py-1 rounded-lg cursor-default">
         {{ element.name }}
       </div>
 
       <div
-        class="border-solid border-8 w-0 h-0 left-3 absolute border-opacity-50 border-t-slate-500 border-transparent"
-      ></div>
+        class="border-solid border-8 w-0 h-0 left-3 absolute border-opacity-50 border-t-slate-500 border-transparent">
+      </div>
     </div>
   </div>
 </template>

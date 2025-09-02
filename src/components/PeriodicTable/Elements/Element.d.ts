@@ -39,7 +39,12 @@ type Element = {
 };
 
 export default Element;
-export type ElementClass =    {name:string,raw_name:string,text_color:string,neon:string} 
+export type ElementClass = {
+  name: string;
+  raw_name: string;
+  text_color: string;
+  neon: string;
+};
 export type ElementType =
   | "Alkali Metal"
   | "Alkaline Earth Metal"
