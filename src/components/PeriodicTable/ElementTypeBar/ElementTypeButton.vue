@@ -38,13 +38,13 @@ const click = () => {
   <button
     :id="`atom-type-${elementType}`"
     @click="click"
-    class="flex flex-row mb-2 items-center gap-2 transition-all duration-500"
+    class="flex flex-row items-center gap-2 transition-all duration-500"
     :style="style"
   >
     <div
-      :class="`w-5 h-5 border-2 rounded-full ${shadow} transition-all duration-500`"
+      :class="`w-6 h-6 border-2 rounded-full ${shadow} transition-all duration-500`"
     ></div>
-    <div>{{ elementType }}</div>
+    <div class="text-xl">{{ elementType }}</div>
   </button>
 </template>
 <style scoped></style>

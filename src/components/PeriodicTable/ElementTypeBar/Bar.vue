@@ -2,8 +2,8 @@
 import ElementTypeButton from "./ElementTypeButton.vue";
 </script>
 <template>
-  <div>
-    <div class="grid grid-cols-5 grid-rows-2 w-[62rem]">
+  <div class="">
+    <div class="grid grid-cols-5 grid-rows-2 gap-1">
       <ElementTypeButton element-type="Alkali Metal" />
       <ElementTypeButton element-type="Alkaline Earth Metal" />
       <ElementTypeButton element-type="Transition Metal" />
